@@ -1,0 +1,23 @@
+
+
+{% extends 'draliz/base.html' %}
+{% block title %}Dragon Lizard Recognition{% endblock %}
+
+{% block content %}
+<div>
+    <h4 class="mt-4 mb-5 border-bottom">Dragon Lizard Recognition</h4>
+    <p>Choose a file to click the guess button</p>
+    <form action="{% url 'draliz:predict' %}" method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="custom-file">
+            {{ form.image }}
+            <label class="custom-file-label" for="customFile">
+                Choose your file to guess
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Estimate</button>
+    </form> 
+</div>
+{% endblock %}

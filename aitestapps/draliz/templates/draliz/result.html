@@ -1,0 +1,33 @@
+{% extends 'draliz/base.html' %}
+{% block title %}Dragon Lizard Recognition{% endblock %}
+
+{% block content %}
+<div>
+    <h4 class="mt-4 mb-5 border-bottom">Dragon Lizard Result !!</h4>
+   
+    <table class='table'>
+        <tbody>
+            <tr>
+                <td>Label Name</td>
+                <td>{{photo_name</td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td>{{photo_data}}</td>
+            </tr>
+                <td>Estimate Label</td>
+                <td>{{predicted}}</td>
+            </tr>
+            <tr>
+                <td>Probability</td>
+                <td>{{percentage}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href = "{% url 'draliz:index' %}" class="btn btn-primary"> Back </a>
+
+
+
+</div>
+{% endblock %}
